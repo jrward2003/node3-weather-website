@@ -11,7 +11,15 @@ const forecast = (lat, long, callback) => {
         }
         else{
             //console.log(body)
-            callback(undefined, "It is currently " + body.current.temperature + " degrees")
+            callback(undefined, {
+                CurrentTemp: body.current.temperature, 
+                Desc: body.current.weather_descriptions[0],
+                Image: body.current.weather_icons[0],
+                FeelsLike: body.current.feelslike,
+                ObsTime: body.current.observation_time,
+                LocalTime: body.current.localtime,
+                Region: body.current.region
+            })
         }
     })
 }

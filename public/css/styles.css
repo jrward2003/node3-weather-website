@@ -48,3 +48,9 @@ button{
     color: white;
     padding: 8px;
 }
+
+#imgWeather{
+    float:left;
+    margin-right: 10px;
+    margin-top: 2%;
+}
